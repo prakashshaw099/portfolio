@@ -9,7 +9,7 @@ const Navbar = () => {
   const menuData = [
     { id: "11", name: "Home", url: "/" },
     { id: "22", name: "Project", url: "/project" },
-    { id: "33", name: "About", url: "/about" },
+    { id: "33", name: "About Me", url: "/#about-me" },
     { id: "44", name: "Contact", url: "/contact" },
   ];
   return (
@@ -34,8 +34,8 @@ const Navbar = () => {
           <ul className="flex flex-col gap-[20px] pt-10">
             {menuData?.map((item) => {
               return (
-                <Link
-                  to={item?.url}
+                <a
+                  href={item?.url}
                   key={item?.id}
                   onClick={() => {
                     setHamburgerMIsOpen(false);
@@ -47,7 +47,7 @@ const Navbar = () => {
                       {item?.name}
                     </div>
                   </li>
-                </Link>
+                </a>
               );
             })}
           </ul>

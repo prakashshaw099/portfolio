@@ -5,21 +5,23 @@ import { BsChevronCompactDown } from "react-icons/bs";
 
 const IntroSection = () => {
   return (
-    <section>
-      <div className="grid grid-cols-1 gap-[10px] justify-center ml-5 mr-5 md:grid-cols-2">
+    <section className="min-h-[100vh]">
+      <div className="grid grid-cols-1 gap-[10px] justify-center ml-5 mr-5 mb-[100px] md:grid-cols-2">
         <div className=" flex flex-col justify-center">
-          <div className="text-[50px] font-semibold md:text-[50px] lg:text-[70px]">
-            About <span className="text-primary">Me</span>
+          <div className="text-5xl font-extrabold md:text-[50px] lg:text-[70px]">
+            FRONTEND <span className="text-primary">DEVELOPER</span>
           </div>
-          <div className="text-[20px] md:text-[25px] lg:text-[30px]">
-            I'm Prakash Shaw, Frontend Developer from Navi Mumbai, India
+          <div className="text-[18px]">
+            Hi! I'm Prakash. A creative Frontend Developer with 2+ years of
+            experience in building high-performance, scalable, and responsive
+            web solutions.
           </div>
-          <div>
+          {/* <div>
             I specialize in developing scalable and responsive web applications,
             excelling in building dynamic UI components with React.js.
             Proficient in state management (Redux), API integration, and
             performance optimization to ensure seamless user experiences.
-          </div>
+          </div> */}
           <div className="flex gap-5 mt-5 md:mt-8">
             <div
               onClick={() =>
@@ -47,14 +49,12 @@ const IntroSection = () => {
           <img src={workingMan} width="100%" />
         </div>
       </div>
-      <div className="hidden md:block">
-        <div className="flex justify-center mt-6">
-          <BsChevronCompactDown
-            size={100}
-            className="opacity-5 animate-bounce"
-          />
-        </div>
+      {/* <div className="hidden md:block"> */}
+      <div className="flex justify-center mt-5">
+        <BsChevronCompactDown size={100} className="opacity-5 animate-bounce" />
       </div>
+      <hr className="mb-6 mx-5 opacity-[0.1]" />
+      {/* </div> */}
     </section>
   );
 };
