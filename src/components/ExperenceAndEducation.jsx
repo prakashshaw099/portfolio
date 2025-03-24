@@ -26,7 +26,7 @@ const ExperenceAndEducation = () => {
           <div className="text-[26px]">
             Jurnior Software Engineer @{" "}
             <span
-              className="text-[#2596be] cursor-pointer"
+              className="text-primary cursor-pointer"
               onClick={() => window.open("https://www.fermioninfotech.com/")}
             >
               Fermion InfoTech
@@ -37,7 +37,7 @@ const ExperenceAndEducation = () => {
           </div>
           <div className="text-[16px] border-l-2 pl-6">
             <div className="flex relative">
-              <div className="bg-[#fff] w-[14px] h-[14px] rounded-full absolute left-[-32px] top-[6px] border-2"></div>
+              <div className="bg-white size-3.5 rounded-full absolute left-[-32px] top-[6px] border-2"></div>
               <div>
                 As a Junior Software Engineer, I’ve gained a year of practical
                 experience in constructing dynamic and responsive web
@@ -45,14 +45,14 @@ const ExperenceAndEducation = () => {
               </div>
             </div>
             <div className="flex relative">
-              <div className="bg-[#fff] w-[14px] h-[14px] rounded-full absolute left-[-32px] top-[6px] border-2"></div>
+              <div className="bg-white size-3.5 rounded-full absolute left-[-32px] top-[6px] border-2"></div>
               <div>
                 My responsibilities involve utilizing HTML, CSS, JavaScript,
                 ReactJS and NextJS to create visually appealing user interfaces.
               </div>
             </div>
             <div className="flex relative">
-              <div className="bg-[#fff] w-[14px] h-[14px] rounded-full absolute left-[-32px] top-[6px] border-2"></div>
+              <div className="bg-white size-3.5 rounded-full absolute left-[-32px] top-[6px] border-2"></div>
               <div>
                 I integrate RESTful APIs from the backend to efferently fetch
                 and manage data, ensuring seamless communication between the
@@ -60,7 +60,7 @@ const ExperenceAndEducation = () => {
               </div>
             </div>
             <div className="flex relative">
-              <div className="bg-[#fff] w-[14px] h-[14px] rounded-full absolute left-[-32px] top-[6px] border-2"></div>
+              <div className="bg-white size-3.5 rounded-full absolute left-[-32px] top-[6px] border-2"></div>
               <div>
                 I focused on debugging, and adhering to coding standards, best
                 practices and problem-solving.
