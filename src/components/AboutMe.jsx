@@ -44,7 +44,7 @@ const AboutMe = () => {
             </p>
             <div className="flex justify-center md:justify-start">
               <a
-                href="#contact"
+                href="https://drive.google.com/file/d/1wFiabD6osCXYABuJr5rV6-KS1mVTGk-n/view"
                 className="px-7 py-4 text-white bg-[#1e1d1e] flex justify-center items-center gap-1 rounded-2xl w-[188px] h-[48px]"
               >
                 Download CV <FiDownload size={16} className="text-white" />
