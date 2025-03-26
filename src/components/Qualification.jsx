@@ -60,7 +60,7 @@ const Qualification = () => {
     );
   };
   return (
-    <section id="qualification" className="pt-8 mb-16">
+    <section id="qualification" className="pt-8 mb-16 lg:pt-16">
       <h2 className="text-4xl text-center font-semibold">Qualification</h2>
       <div className="mb-12 text-center">My Personal Journey</div>
       <div

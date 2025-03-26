@@ -12,7 +12,7 @@ const Skills = () => {
     { id: 8, name: "Git" },
   ];
   return (
-    <section id="skills" className="pt-8 mb-16">
+    <section id="skills" className="pt-8 mb-16 lg:pt-16">
       <h2 className="text-4xl text-center font-semibold">Skills</h2>
       <div className="mb-12 text-center">My Technical Skillset</div>
       <div className="mx-12 px-8 py-8 grid grid-cols-2 gap-14 md:grid-cols-5 md:mx-18">

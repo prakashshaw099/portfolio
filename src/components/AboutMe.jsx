@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="pt-8 pb-16">
+    <section id="about" className="pt-8 pb-16 lg:pt-16">
       <h1 className="text-center text-4xl font-semibold">About Me</h1>
       <div className="text-center text-[14px] mb-12">My Introduction</div>
       <div className="flex flex-col md:flex-row gap-10 md:gap-16 md:mx-7">
