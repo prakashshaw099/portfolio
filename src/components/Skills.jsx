@@ -20,7 +20,7 @@ const Skills = () => {
           return (
             <div key={item?.id} className="flex flex-col justify-end ">
               <div className="flex justify-center mb-2.5">
-                <div className="w-[70px]">
+                <div className="w-[70px] hover:scale-120 hover:duration-900">
                   <img src={`/assets/skillIcons/${item?.name}.png`} />
                 </div>
               </div>
