@@ -1,10 +1,11 @@
 import React from "react";
-import { FaInstagramSquare } from "react-icons/fa";
+import { SiGeeksforgeeks } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import { SlMouse } from "react-icons/sl";
 import { IoIosArrowRoundDown } from "react-icons/io";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   return (
@@ -15,21 +16,25 @@ const Home = () => {
     >
       <div className="bg-[#faf8f7] z-50 hidden lg:block md:fixed md:left-0 md:right-0">
         <nav className="flex justify-between pt-6 pb-2 px-[150px] ">
-          <div className="text-[14px]">Home</div>
+          <div className="text-[18px]">
+            <a href="#home">
+              Portfoli<span className="text-primary">o</span>
+            </a>
+          </div>
           <ul className="flex gap-4">
-            <li className="cursor-pointer text-[14px]">
+            <li className="text-[14px] animate-text">
               <a href="#about">About Me</a>
             </li>
-            <li className="cursor-pointer text-[14px]">
+            <li className="text-[14px] animate-text">
               <a href="#qualification">Qualification</a>
             </li>
-            <li className="cursor-pointer text-[14px]">
+            <li className="text-[14px] animate-text">
               <a href="#skills">Skills</a>
             </li>
-            <li className="cursor-pointer text-[14px]">
+            <li className="text-[14px] animate-text">
               <a href="#portfolio">Portfolio</a>
             </li>
-            <li className="cursor-pointer text-[14px]">
+            <li className="text-[14px] animate-text">
               <a href="#contact">Contact Me</a>
             </li>
           </ul>
@@ -41,15 +46,36 @@ const Home = () => {
             id="social-media"
             className="flex flex-col justify-start items-center gap-8.5 p-4"
           >
-            <FaInstagramSquare size={22} />
-            <FaLinkedin size={22} />
-            <FaGithub size={22} />
+            <a
+              href="https://www.geeksforgeeks.org/user/prakashshaw1577"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiGeeksforgeeks size={22} className="animate-text" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prakashshaw/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={22} className="animate-text" />
+            </a>
+            <a
+              href="https://github.com/prakashshaw099"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={22} className="animate-text" />
+            </a>
           </div>
           <div
             id="my-photo"
-            className="w-[200px] overflow-auto rounded-4xl md:order-last md:w-[240px]"
+            className="w-[200px] h-[max-content] overflow-auto rounded-4xl md:order-last md:w-[240px]"
           >
-            <img src="/assets/my-photo.jpeg" className="w-full" />
+            <img
+              src="/assets/my-photo.jpeg"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div id="intro" className="col-span-2 self-center pl-4 md:col-span-1">
             <h1 className="text-3xl font-semibold mb-1">Prakash Shaw 🖐️</h1>
@@ -60,17 +86,31 @@ const Home = () => {
             <div className="flex items-end gap-2.5 mb-2">
               <div className="text-[16px]">I am a</div>
 
-              <div className="text-[#a44df6] text-2xl">Frontend Developer|</div>
+              {/* <div > */}
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed once, initially
+                  "Jr. Software Engineer",
+                  1500,
+                  "Front-End Developer",
+                  1500,
+                  "Web Developer",
+                  1500,
+                  "Coder",
+                  1500,
+                ]}
+                speed={30}
+                className="text-primary text-[20px]"
+                repeat={Infinity}
+              />
+              {/* </div> */}
             </div>
             <p className="mb-6 md:text-[14px]">
               I’m a Jurnior software developer and here is my portfolio website.
               Have a look at my journey as a Jurnior software developer and all
               of my project works to learn more about me.
             </p>
-            <a
-              href="#contact"
-              className="px-7 py-4 text-white bg-[#1e1d1e] flex justify-center items-center gap-1 rounded-2xl w-[144px] h-[44px]"
-            >
+            <a href="#contact" className="w-[150px] h-[44px] animate-btn">
               Say Hello <PiPaperPlaneTiltBold className="text-white" />
             </a>
           </div>

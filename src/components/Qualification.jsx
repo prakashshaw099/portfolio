@@ -69,7 +69,7 @@ const Qualification = () => {
       >
         <div
           className={`flex justify-center items-center gap-1.5 cursor-pointer font-semibold ${
-            isActive === "education" ? "text-[#a44df6]" : ""
+            isActive === "education" ? "text-primary" : ""
           }`}
           onClick={() => setIsActive("education")}
         >
@@ -78,7 +78,7 @@ const Qualification = () => {
         </div>
         <div
           className={`flex justify-center items-center gap-1.5 cursor-pointer font-semibold ${
-            isActive === "experience" ? "text-[#a44df6]" : ""
+            isActive === "experience" ? "text-primary" : ""
           }`}
           onClick={() => setIsActive("experience")}
         >

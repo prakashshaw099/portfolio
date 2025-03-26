@@ -11,9 +11,12 @@ const AboutMe = () => {
         <div className="flex justify-center">
           <div
             id="my-photo"
-            className="w-[220px]  overflow-auto rounded-3xl md:w-[300px]"
+            className="w-[220px] h-[max-content] overflow-auto rounded-3xl md:w-[300px]"
           >
-            <img src="/assets/my-photo.jpeg" className="w-full" />
+            <img
+              src="/assets/my-photo.jpeg"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
         <div>
@@ -32,20 +35,23 @@ const AboutMe = () => {
 
           <div className="flex flex-col gap-2.5 px-12 text-center md:text-start">
             <p className="">
-              Hi Everyone My name is Prakash Shaw. I am a Jurnior Software
-              Engineer and I have been working for past 2 Years with Fermion
-              InfoTech. I enjoy utilizing logic and code to give shape to my new
-              innovative ideas. Currently I am working on ReactJs and making
-              beautiful UI-UX designs and websites.
+              Hi Everyone! My name is Prakash Shaw, and I am a Junior Software
+              Engineer with two years of experience at Fermion InfoTech. I have
+              a passion for leveraging logic and code to bring innovative ideas
+              to life. Currently, I specialize in React.js, focusing on building
+              dynamic, responsive, and visually appealing UI/UX designs and
+              websites.
             </p>
             <p className="mb-8">
-              Apart from that, I am an avid Finance enthusiast and also have a
-              deep love for photography.
+              Beyond coding, I am also an avid finance enthusiast with a keen
+              interest in market trends and investment.
             </p>
             <div className="flex justify-center md:justify-start">
               <a
                 href="https://drive.google.com/file/d/1wFiabD6osCXYABuJr5rV6-KS1mVTGk-n/view"
-                className="px-7 py-4 text-white bg-[#1e1d1e] flex justify-center items-center gap-1 rounded-2xl w-[188px] h-[48px]"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" w-[188px] h-[48px] animate-btn"
               >
                 Download CV <FiDownload size={16} className="text-white" />
               </a>

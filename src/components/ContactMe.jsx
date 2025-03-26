@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import emailjs from "@emailjs/browser";
+import { Toaster, toast } from "react-hot-toast";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -9,40 +10,57 @@ const ContactMe = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    emailjs
-      .send(
-        "service_szfeyye", // Replace with your EmailJS Service ID
-        "template_0ht005l", // Replace with your EmailJS Template ID
-        formData,
-        "WItcpbvAORf3ostmD" // Replace with your EmailJS Public Key
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully!", response);
+    if (formData?.name && formData?.email && formData?.message) {
+      emailjs
+        .send(
+          "service_szfeyye", // Replace with your EmailJS Service ID
+          "template_0ht005l", // Replace with your EmailJS Template ID
+          formData,
+          "WItcpbvAORf3ostmD" // Replace with your EmailJS Public Key
+        )
+        .then(
+          (response) => {
+            console.log("Email sent successfully!", response);
+            toast.success("Email sent Successfully!");
 
-          alert("Email sent!");
-          setFormData({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-          alert("Failed to send email.");
-        }
-      );
+            setIsLoading(false);
+            setFormData({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.error("Error sending email:", error);
+            toast.error("Failed to send email");
+            setIsLoading(false);
+          }
+        );
+    } else {
+      setIsLoading(false);
+    }
   };
 
   return (
     <section id="contact" className="pt-8">
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+          style: { background: "#333", color: "#fff" },
+        }}
+      />
       <h2 className="text-4xl text-center font-semibold">Contact Me</h2>
       <div className="mb-12 text-center">Lets Get in touch</div>
       <form className="mx-10 mb-12">
@@ -88,17 +106,25 @@ const ContactMe = () => {
             />
           </div>
         </div>
-        <div
-          className="flex justify-center md:justify-start"
-          onClick={sendEmail}
-        >
-          <a
-            href="#contact"
-            className="px-7 py-4 mt-10 text-white bg-[#1e1d1e] flex justify-center items-center gap-2 rounded-2xl w-[205px] h-[56px] md:ml-20"
+        {!isLoading ? (
+          <div
+            className="flex justify-center md:justify-start"
+            onClick={sendEmail}
           >
-            Send Message <PiPaperPlaneTiltBold className="text-white" />
-          </a>
-        </div>
+            <a
+              href="#contact"
+              className="mt-10 w-[205px] h-[56px] animate-btn md:ml-20"
+            >
+              Send Message <PiPaperPlaneTiltBold className="text-white" />
+            </a>
+          </div>
+        ) : (
+          <div className="flex justify-center md:justify-start">
+            <div className="mt-10 w-[205px] h-[56px] animate-btn md:ml-20">
+              Sending.....
+            </div>
+          </div>
+        )}
       </form>
     </section>
   );
