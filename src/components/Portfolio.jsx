@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Portfolio = ({ modalOpen }) => {
   return (
-    <section id="portfolio" className="pt-8">
+    <section id="portfolio" className="pt-8 lg:pt-16">
       <h2 className="text-4xl text-center font-semibold">Portfolio</h2>
       <div className="mb-12 text-center">My Projects</div>
       <div className="m-[80px_24px_32px_24px] grid grid-cols-1 gap-7 md:grid-cols-[repeat(2,_270px)] md:justify-center md:m-[120px_24px_32px_24px]">

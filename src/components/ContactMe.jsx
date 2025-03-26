@@ -52,7 +52,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section id="contact" className="pt-8">
+    <section id="contact" className="pt-8 lg:pt-16">
       <Toaster
         position="top-right"
         reverseOrder={false}
